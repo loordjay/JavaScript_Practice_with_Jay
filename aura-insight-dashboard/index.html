@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura-Insight Dashboard</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i> Aura
+            </div>
+            <nav class="menu">
+                <a href="#" class="menu-item active" data-id="dashboard"><i class="fa-solid fa-house"></i> Dashboard</a>
+                <a href="#" class="menu-item" data-id="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+                <a href="#" class="menu-item" data-id="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sticky Header -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="global-search" placeholder="Search (Cmd/Ctrl + K)...">
+                </div>
+                <div class="user-profile">
+                    <span>Admin</span>
+                    <div class="avatar">AD</div>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid" id="dashboard-grid">
+                <!-- Weather Widget (API Integration) -->
+                <div class="card weather-card glass" draggable="true">
+                    <h3><i class="fa-solid fa-cloud-sun"></i> Weather</h3>
+                    <div id="weather-data" class="widget-content">
+                        <div class="loader">Loading...</div>
+                    </div>
+                </div>
+
+                <!-- Crypto Ticker (Shadow DOM Implementation) -->
+                <div class="card crypto-card glass" draggable="true">
+                    <h3><i class="fa-brands fa-bitcoin"></i> Crypto Market</h3>
+                    <div id="crypto-container" class="widget-content">
+                        <!-- Shadow DOM will be attached here -->
+                        <crypto-ticker></crypto-ticker>
+                    </div>
+                </div>
+
+                <!-- Task List (Advanced DOM: Fragments) -->
+                <div class="card task-card glass" draggable="true">
+                    <h3><i class="fa-solid fa-list-check"></i> Active Tasks</h3>
+                    <ul id="task-list" class="task-list">
+                        <!-- Tasks injected via DocumentFragment -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Custom Context Menu -->
+    <div id="context-menu" class="context-menu glass">
+        <ul>
+            <li onclick="refreshDashboard()"><i class="fa-solid fa-rotate-right"></i> Refresh</li>
+            <li onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> Toggle Theme</li>
+            <li class="danger"><i class="fa-solid fa-trash"></i> Clear Data</li>
+        </ul>
+    </div>
+
+    <!-- Back to Course Link -->
+    <a href="../index.html" class="back-link glass"><i class="fa-solid fa-arrow-left"></i> Course</a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

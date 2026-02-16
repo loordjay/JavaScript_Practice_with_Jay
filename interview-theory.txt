@@ -1,0 +1,96 @@
+FRONTEND INTERVIEW THEORY QUESTIONS
+=====================================
+
+1. What is the difference between 'var', 'let', and 'const'?
+   - 'var': Function-scoped, hoisted, can be redeclared.
+   - 'let': Block-scoped, not hoisted (temporal dead zone), cannot be redeclared in the same scope.
+   - 'const': Block-scoped, not hoisted, cannot be reassigned (but objects/arrays can be mutated).
+
+2. What is hoisting?
+   - Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope (script or function).
+   - Only declarations are hoisted, not initializations.
+
+3. Explain closures.
+   - A closure is a function that remembers its outer variables and can access them even when the outer function has finished executing.
+
+4. What is the Event Loop?
+   - JS is single-threaded. The Event Loop monitors the Call Stack and the Callback Queue. 
+   - If the Call Stack is empty, it takes the first event from the queue and pushes it to the stack.
+
+5. What is the difference between '==' and '==='?
+   - '==' compares values after type conversion (loose equality).
+   - '===' compares both value and type (strict equality). Always prefer '==='.
+
+6. What are Promises and why do we use them?
+   - Promises are objects representing the eventual completion (or failure) of an asynchronous operation.
+   - They help avoid "Callback Hell" and make async code cleaner.
+
+7. What is the DOM?
+   - The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs (JS) can change the document structure, style, and content.
+
+8. Explain 'this' keyword.
+   - 'this' refers to the object that is executing the current function.
+   - In a method: refers to the owner object.
+   - Alone: refers to the global object (window).
+   - In a function: refers to the global object (in strict mode, it is undefined).
+   - In an event: refers to the element that received the event.
+
+9. What is Event Bubbling vs Event Capturing?
+   - Bubbling: Event starts at the target element and bubbles up to the root.
+   - Capturing: Event starts at the root and goes down to the target.
+
+10. What are Arrow Functions?
+    - A concise syntax for writing function expressions.
+    - They do not have their own 'this'; they inherit it from the parent scope.
+
+11. What is the difference between null and undefined?
+    - Undefined: Variable declared but not assigned.
+    - Null: Assignment value representing "no value".
+
+12. Map vs Set vs WeakMap/WeakSet
+    - Map: Key-Value pairs, keys can be any type.
+    - Set: Unique values only.
+    - WeakMap/Set: Keys must be objects, "weakly" held (garbage collected if no other reference).
+
+13. Shallow Copy vs Deep Copy
+    - Shallow: Copies reference (Object.assign, spread ...). Nested objects are shared.
+    - Deep: Copies values (JSON.parse(JSON.stringify()), structuredClone()). New references.
+
+14. Call, Apply, Bind
+    - call(thisArg, arg1, arg2): Invokes fn immediately.
+    - apply(thisArg, [args]): Invokes fn immediately, args as array.
+    - bind(thisArg): Returns NEW fn with bound 'this'.
+
+15. Debouncing vs Throttling
+    - Debounce: Wait for X ms of silence before running (e.g., Search bar).
+    - Throttle: Run at most once every X ms (e.g., Scroll/Resize).
+
+16. Event Bubbling vs Capturing
+    - Capture Phase: Document -> Html -> Body -> ... -> Target
+    - Bubbling Phase: Target -> ... -> Body -> Html -> Document
+    - event.stopPropagation() stops this flow.
+
+17. Storage: Local vs Session vs Cookies
+    - LocalStorage: Persistent until cleared (5-10MB).
+    - SessionStorage: Until tab closes (5MB).
+    - Cookies: Sent with HTTP requests (4KB), strict expiration.
+
+18. Critical Rendering Path
+    - Steps browser takes to render page: HTML -> DOM, CSS -> CSSOM -> Render Tree -> Layout -> Paint.
+    - Optimizations: Defer non-critical JS, compress images, minimize CSS.
+
+19. Reflow vs Repaint
+    - Reflow: Layout calculation (expensive). Triggered by adding elements, changing size/pos.
+    - Repaint: Visual update (color, visibility). Cheaper than reflow.
+
+20. Virtual DOM vs Real DOM
+    - Real DOM: Slow to update directly.
+    - Virtual DOM (React): Lightweight copy. Updates are diffed and batched (Reconciliation).
+
+21. Code Splitting & Tree Shaking
+    - Tree Shaking: Removing unused code during build (dead code elimination).
+    - Code Splitting: Breaking bundle into chunks (load on demand).
+
+22. Currying
+    - Transforming f(a,b,c) into f(a)(b)(c).
+    - Useful for partial application and composition.
