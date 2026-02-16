@@ -58,6 +58,9 @@ const y = 5;
 
 // Arithmetic
 console.log("Addition:", x + y);
+console.log("Subtraction:", x - y);
+console.log("Multiplication:", x * y);
+console.log("Division:", x / y);
 console.log("Modulus (Remainder):", x % y);
 
 // Comparison
@@ -107,6 +110,23 @@ switch (day) {
         console.log("Just another day.");
 }
 
+
+
+
+let toggle = "dark"
+switch (toggle) {
+    case "light":
+        console.log("Turning on the light.");
+        break;
+    case "dark":
+        console.log("Turning off the light.");
+        break;
+    default:
+        console.log("Invalid toggle value.");
+}
+
+
+
 // Loops
 console.log("For Loop:");
 for (let i = 0; i < 3; i++) {
@@ -114,6 +134,11 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.groupEnd();
+
+let Hello = 5 ;
+for(let i=0 ;i<=Hello;i++){
+    console.log(`Hello World ${i}`);
+}
 
 
 // ==========================================
@@ -166,6 +191,10 @@ fruits.forEach((fruit, index) => console.log(`${index}: ${fruit}`));
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(num => num * 2);
 console.log("Doubled:", doubled);
+
+
+const triplet = numbers.map(num => num * 3);
+console.log("Triplet:", triplet);
 
 // filter: Create a NEW array with elements that pass a test
 const evens = numbers.filter(num => num % 2 === 0);
@@ -222,6 +251,9 @@ const arr1 = [1, 2];
 const arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]
 console.log("Spread Array:", arr2);
 
+const arr3 = [...arr1,...arr2, 5, 6]; // [1, 2, 3, 4, 5, 6]
+console.log("Spread Array:", arr3);
+
 const obj1 = { a: 1 };
 const obj2 = { ...obj1, b: 2 }; // { a: 1, b: 2 }
 console.log("Spread Object:", obj2);
@@ -252,6 +284,7 @@ const fetchData = new Promise((resolve, reject) => {
 fetchData
     .then(data => console.log("Promise:", data))
     .catch(error => console.error("Promise Error:", error));
+
 
 // Async / Await (The modern standard)
 async function getData() {
