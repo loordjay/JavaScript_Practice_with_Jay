@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Mini Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="text-center py-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            DOM Mastery Hub
+        </h1>
+        <p class="text-gray-400">12 Mini Projects in a Single Glassmorphic Interface</p>
+    </header>
+
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. Color Flipper -->
+            <div class="glass-card" style="animation-delay: 0.1s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">1. Color Flipper</h2>
+                <div id="flipper-bg" class="h-20 rounded-lg transition-colors duration-500 flex items-center justify-center font-mono">#FFFFFF</div>
+                <button class="btn-glass" onclick="flipColor()">Change Color</button>
+            </div>
+
+            <!-- 2. Counter App -->
+            <div class="glass-card" style="animation-delay: 0.2s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">2. Counter App</h2>
+                <div id="counter-val" class="text-4xl text-center font-bold">0</div>
+                <div class="flex gap-2">
+                    <button class="btn-glass flex-1" onclick="updateCounter(-1)">-</button>
+                    <button class="btn-glass flex-1" onclick="updateCounter(0)">Reset</button>
+                    <button class="btn-glass flex-1" onclick="updateCounter(1)">+</button>
+                </div>
+            </div>
+
+            <!-- 3. Digital Clock -->
+            <div class="glass-card" style="animation-delay: 0.3s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">3. Digital Clock</h2>
+                <div id="clock" class="clock-text text-center py-4">00:00:00 AM</div>
+                <p class="text-xs text-gray-400 text-center">Live System Time</p>
+            </div>
+
+            <!-- 4. Word Counter -->
+            <div class="glass-card" style="animation-delay: 0.4s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">4. Word & Char Counter</h2>
+                <textarea id="word-input" class="input-glass h-24 resize-none" placeholder="Type here..."></textarea>
+                <div class="flex justify-between text-sm">
+                    <span>Words: <b id="word-count">0</b></span>
+                    <span>Chars: <b id="char-count">0</b></span>
+                </div>
+            </div>
+
+            <!-- 5. Modal Pop-up -->
+            <div class="glass-card" style="animation-delay: 0.5s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">5. Modal Pop-up</h2>
+                <p class="text-sm">Experience a glassmorphic overlay.</p>
+                <button class="btn-glass" onclick="toggleModal(true)">Open Modal</button>
+            </div>
+
+            <!-- 6. Simple To-Do -->
+            <div class="glass-card" style="animation-delay: 0.6s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">6. Simple To-Do</h2>
+                <div class="flex gap-2">
+                    <input type="text" id="todo-input" class="input-glass" placeholder="Task...">
+                    <button class="btn-glass" onclick="addTodo()">Add</button>
+                </div>
+                <ul id="todo-list" class="text-sm space-y-2 max-h-32 overflow-y-auto pr-2"></ul>
+            </div>
+
+            <!-- 7. Search Filter -->
+            <div class="glass-card" style="animation-delay: 0.7s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">7. Search Filter</h2>
+                <input type="text" id="search-input" class="input-glass" placeholder="Search Fruits..." onkeyup="filterItems()">
+                <ul id="item-list" class="text-sm space-y-1">
+                    <li>Apple</li><li>Banana</li><li>Cherry</li><li>Dragonfruit</li><li>Elderberry</li>
+                </ul>
+            </div>
+
+            <!-- 8. Drum Kit -->
+            <div class="glass-card" style="animation-delay: 0.8s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">8. Drum Kit</h2>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="drum-pad text-center" onclick="playDrum('Kick')">A<br>Kick</div>
+                    <div class="drum-pad text-center" onclick="playDrum('Snare')">S<br>Snare</div>
+                    <div class="drum-pad text-center" onclick="playDrum('Hi-Hat')">D<br>Hat</div>
+                </div>
+                <p class="text-[10px] text-center text-gray-400">Press A, S, or D on keyboard</p>
+            </div>
+
+            <!-- 9. Dice Roller -->
+            <div class="glass-card" style="animation-delay: 0.9s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">9. Dice Roller</h2>
+                <div id="dice" class="dice-box text-center">🎲</div>
+                <button class="btn-glass" onclick="rollDice()">Roll Dice</button>
+            </div>
+
+            <!-- 10. Password Gen -->
+            <div class="glass-card" style="animation-delay: 1.0s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">10. Password Gen</h2>
+                <input type="text" id="pass-output" class="input-glass text-center font-mono" readonly>
+                <button class="btn-glass" onclick="generatePass()">Generate</button>
+            </div>
+
+            <!-- 11. Accordion -->
+            <div class="glass-card" style="animation-delay: 1.1s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">11. Accordion FAQ</h2>
+                <div class="space-y-2 text-sm">
+                    <div class="border-b border-white/5 pb-1">
+                        <button class="w-full text-left font-bold" onclick="toggleAcc(0)">What is DOM? +</button>
+                        <p id="acc-0" class="hidden text-gray-400 mt-1">Document Object Model.</p>
+                    </div>
+                    <div class="border-b border-white/5 pb-1">
+                        <button class="w-full text-left font-bold" onclick="toggleAcc(1)">Is it hard? +</button>
+                        <p id="acc-1" class="hidden text-gray-400 mt-1">Not with practice!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Image Slider -->
+            <div class="glass-card" style="animation-delay: 1.2s">
+                <h2 class="text-xl font-semibold border-b border-white/10 pb-2">12. Mini Slider</h2>
+                <div id="slider" class="h-24 rounded-lg bg-cover bg-center transition-all duration-500" style="background-image: url('https://picsum.photos/id/10/400/200')"></div>
+                <div class="flex gap-2">
+                    <button class="btn-glass flex-1" onclick="moveSlider(-1)">Prev</button>
+                    <button class="btn-glass flex-1" onclick="moveSlider(1)">Next</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal" class="modal-overlay">
+        <div class="glass-card w-80 text-center scale-110">
+            <h2 class="text-2xl font-bold">Hello!</h2>
+            <p class="text-gray-300">This is a glassmorphic modal window.</p>
+            <button class="btn-glass bg-red-500/20" onclick="toggleModal(false)">Close Me</button>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
