@@ -1,67 +1,76 @@
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #4338ca;
-    --bg-color: #f3f4f6;
-    --text-color: #1f2937;
-    --card-bg: #ffffff;
+    --primary-color: #b9c6c1;
+    --secondary-color: #a5b4fc;
+    --text-color: #ffffff;
+    /* Glass Effect Config */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(15px);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: var(--bg-color);
+    /* A deep gradient is essential for the glass effect to be visible */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
     color: var(--text-color);
     line-height: 1.6;
     padding: 2rem;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 3rem;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
 
+header p {
+    color: #94a3b8;
+}
+
+/* Glass Card Base */
 .card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 3rem;
 }
 
 h2 {
     color: var(--secondary-color);
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.75rem;
     margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
-ul {
-    list-style-position: inside;
-}
-
-li {
-    margin-bottom: 0.8rem;
-}
-
+/* Project Grid & Links */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
@@ -69,26 +78,55 @@ li {
     display: block;
     text-decoration: none;
     color: inherit;
-    background: #f9fafb;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    /* Smooth Transition for Hover */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* THE HOVER EFFECT */
 .project-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-link h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.project-link p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Custom bullet for list items */
+li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
 }
 
 footer {
     text-align: center;
-    margin-top: 3rem;
-    color: #6b7280;
+    margin-top: 4rem;
+    color: #64748b;
 }

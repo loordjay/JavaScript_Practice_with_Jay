@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated cursor</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+   
+    <div class="cursor-container" id="cursor-container">
+        <div class="small-cursor" id="small-cursor"></div>
+        <div class="shadow-cursor" id="shadow-cursor"></div>
+    </div>
+
+    <main class="content space-y-8">
+        <h1 class="text-5xl font-bold tracking-tight text-white mb-4">
+            Custom <span class="text-indigo-500">Cursor</span> Experience
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+            Move your mouse around to see the fluid shadow trail. Hover over the interactive elements below to see the cursor react and change its shape.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-6 mt-12">
+            <a href="#" class="hover-target px-8 py-3 bg-indigo-600 rounded-full font-medium transition-all hover:bg-indigo-500 hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]">
+                Hover Me
+            </a>
+            <button class="hover-target px-8 py-3 border border-slate-700 rounded-full font-medium transition-all hover:border-indigo-500">
+                Explore More
+            </button>
+        </div>
+
+        <p class="text-sm text-slate-500 italic mt-8 hover-text">
+            (Try hovering over this text specifically)
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
