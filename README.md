@@ -30,37 +30,49 @@ Practice essential DOM skills with isolated, focused projects.
 
 | Project | Concepts Learned | Location |
 | :--- | :--- | :--- |
-| **Color Flipper** | Event Listeners, `Math.random()`, Style manipulation. | `mini-project-1-color-flipper` |
-| **Interactive Counter** | State management, Conditionals, ClassList toggling. | `mini-project-2-counter` |
-| **Modal Popup** | CSS visibility transitions, Overlay logic, DOM selection. | `mini-project-3-modal` |
+| **1. Color Flipper** | Event Listeners, `Math.random()`, Style manipulation. | `mini-project-1-color-flipper/` |
+| **2. Interactive Counter** | State management, Conditionals, ClassList toggling. | `mini-project-2-counter/` |
+| **3. Modal Popup** | CSS visibility transitions, Overlay logic, DOM selection. | `mini-project-3-modal/` |
+| **4. Todo List** | CRUD operations, LocalStorage, DOM array rendering. | `mini-project-4-todo-list/` |
+| **5. Calculator** | Form handling, Mathematical operations, Input validation. | `cal-project/` |
+| **6. Animated Mouse Cursor** | Mouse events, Position tracking, CSS transitions. | `mini-project-5-AnimationMouse/` |
+| **7. Number Game** | Game logic, Timer functions, Score management. | `mini-project-6-Game/` |
+| **8. Inspiration Vault** | Dynamic content, Data storage, UI state management. | `mini-project-7-Inspiration Vault/` |
 
 ---
 
-### 3. 🌟 Master Project: Aura-Insight Dashboard
-A professional-grade Single Page Application (SPA) demonstrating modern frontend architecture. 
+### 3. 🌟 12 Simple DOM Projects
+A consolidated collection of 12 mini DOM projects in a single glassmorphic interface.
 
-**Location**: `aura-insight-dashboard/`
+**Location**: `12-simple-DOM-Projects/`
 
-#### Key Features & Technologies:
-*   **💎 Glassmorphism UI**: High-end aesthetic using `backdrop-filter` and semi-transparent gradients.
-*   **⚡ Advanced DOM**:
-    *   **Shadow DOM**: Encapsulated styles for the `crypto-ticker` component.
-    *   **DocumentFragment**: High-performance batch rendering for the Task List.
-*   **🎮 Event Handling**:
-    *   **Drag & Drop API**: Reorderable dashboard widgets.
-    *   **Custom Context Menu**: Right-click interaction override.
-    *   **Keyboard Shortcuts**: Global `Cmd/Ctrl + K` search trigger.
-*   **📡 API Layer**:
-    *   **AbortController**: Cancelling stale fetch requests on timeout.
-    *   **Debouncing**: Optimized search input processing.
-    *   **Async/Await**: Clean asynchronous data fetching.
+#### Projects Included:
+1. **Color Flipper** - Random background color generation
+2. **Counter App** - Increment/Decrement/Reset functionality
+3. **Digital Clock** - Real-time clock display
+4. **Word & Char Counter** - Text analysis tool
+5. **Modal Pop-up** - Interactive overlay window
+6. **Simple To-Do** - Task management
+7. **Search Filter** - Dynamic list filtering
+8. **Drum Kit** - Keyboard-based sound playback
+9. **Dice Roller** - Random dice generation
+10. **Password Generator** - Secure password creation
+11. **Accordion FAQ** - Collapsible content sections
+12. **Image Slider** - Carousel navigation
+
+#### Key Technologies:
+*   **Glassmorphism UI** - Modern frosted glass aesthetic with `backdrop-filter`
+*   **Tailwind CSS** - Utility-first CSS framework
+*   **Vanilla JavaScript** - Pure DOM manipulation without frameworks
+
+---
 
 ## 🏁 How to Start
 
 1.  **Clone or Download** this repository.
 2.  Open **`index.html`** in your browser. This is your Course Hub.
 3.  **To Learn**: Open the browser console (F12) while on the hub to interact with `learn-js.js`.
-4.  **To Build**: Navigate to the `aura-insight-dashboard` folder strings and open its `index.html` to see the master project in action.
+4.  **To Practice**: Click on any mini-project link from the Course Hub to start building!
 
 ---
 
@@ -68,6 +80,46 @@ A professional-grade Single Page Application (SPA) demonstrating modern frontend
 1.  **Week 1**: Read `learn-js.js` and complete Mini Projects 1-3.
 2.  **Week 2**: Solve the first 25 problems in `interview-practice.js`.
 3.  **Week 3**: Study `interview-theory.txt` and attempt Advanced challenges.
-4.  **Week 4**: Dissect and recreate the **Aura-Insight Dashboard** from scratch.
+4.  **Week 4**: Complete Projects 4-8 and the 12 Simple DOM Projects.
+5.  **Week 5**: Review all projects, understand the code structure, and try recreating them from scratch.
+
+---
+
+## 📁 Project Structure
+
+```
+js-mastery-course/
+├── index.html                    # Course Hub (Main Entry)
+├── learn-js.js                   # Core JavaScript concepts
+├── interview-theory.txt          # Interview questions
+├── interview-practice.js         # Coding challenges
+├── style.css                     # Course Hub styles
+│
+├── mini-project-1-color-flipper/  # Project 1
+├── mini-project-2-counter/        # Project 2
+├── mini-project-3-modal/         # Project 3
+├── mini-project-4-todo-list/     # Project 4
+├── mini-project-5-AnimationMouse/ # Project 5
+├── mini-project-6-Game/          # Project 6
+├── mini-project-7-Inspiration Vault/ # Project 7
+│
+├── cal-project/                  # Calculator Utility
+└── 12-simple-DOM-Projects/       # 12 Mini DOM Projects
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+After completing this course, you will have:
+
+- ✅ Strong understanding of JavaScript fundamentals
+- ✅ Ability to manipulate the DOM efficiently
+- ✅ Knowledge of modern ES6+ features
+- ✅ Skills to build interactive web applications
+- ✅ Confidence to handle technical interviews
+- ✅ Portfolio of 20+ mini projects
+
+---
 
 Happy Coding! 💻
